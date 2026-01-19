@@ -1,0 +1,16 @@
+#GET PACKAGES INSTALLED
+npm init -y
+npm install express
+
+#RUN THE SERVER (http://localhost:3000)
+node server.js
+
+#TEST IT FROM A SHELL
+curl -X POST http://localhost:3000/api/data  -H "Content-Type: application/json" -d '{"id":1000, "name": "Mel", "age": 50}'
+
+curl -X POST http://localhost:3000/api/data -H "Content-Type: application/json" -d '{"action":"create","id":123,"name":"Mel","age":50}'
+
+curl -X POST http://localhost:3000/api/data  -H "Content-Type: application/json" -d '{"action":"getuser", "id":1000}'
+
+curl -X POST http://localhost:3000/api/data  -H "Content-Type: application/json" -d '{"action":"login", "email": "mel@google.com", "password": "dasdfe12_EEQ"}'
+
