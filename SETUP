@@ -1,8 +1,12 @@
 #!/opt/local/bin/bash
 
+#CLEANUP
 rm -rf node_modules
 rm -rf package-lock.json
 
+#INSTALL
 npm init -y
 npm install express
+
+#RUN SERVER
 node server.js
